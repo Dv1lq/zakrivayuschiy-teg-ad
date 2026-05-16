@@ -383,7 +383,7 @@
     </main>
 
     <footer class="footer">
-      <button class="button footer__save-button" type="button" id="save-btn" aria-label="Сохранить на память">
+      <button class="button footer__save-button card__save-btn" type="button" id="save-btn" aria-label="Сохранить на память">
         <svg class="floppy-icon" aria-hidden="true">
           <use href="#floppy"/>
         </svg>
@@ -407,18 +407,22 @@
 
     <script src="./scripts/like.js"></script>
     <script>
-      const saveBtn = document.getElementById('save-btn');
-      const saveDialog = document.getElementById('save-dialog');
-      const dialogCloseBtn = document.getElementById('dialog-close-btn');
+      const saveButtons = document.querySelectorAll('.card__save-btn');
+      const dialog = document.querySelector('.dialog');
+      const closeButton = document.querySelector('.dialog__close-btn');
 
-      saveBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        saveDialog.showModal();
+      saveButtons.forEach((btn) => {
+        btn.addEventListener('click', (evt) => {
+          evt.preventDefault();
+          evt.stopPropagation();
+          dialog.showModal();
+        });
       });
 
-      dialogCloseBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        saveDialog.close();
+      closeButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+        dialog.close();
       });
     </script>
   </body>
