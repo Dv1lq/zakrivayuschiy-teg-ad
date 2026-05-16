@@ -404,33 +404,5 @@
   </dialog>
 
   <script src="./scripts/like.js"></script>
-  <script>
-    const dialog = document.querySelector('.dialog');
-    const saveButtons = document.querySelectorAll('.card__like-button');
-    const footerButton = document.querySelector('.footer__save-button');
-    const closeButton = document.querySelector('.dialog__button');
-
-    function openDialog() {
-      dialog.showModal();
-    }
-
-    function closeDialog() {
-      dialog.close();
-    }
-
-    if (saveButtons.length) {
-      saveButtons.forEach(function(btn) {
-        btn.addEventListener('click', openDialog);
-      });
-    }
-
-    if (footerButton) {
-      footerButton.addEventListener('click', openDialog);
-    }
-
-    if (closeButton) {
-      closeButton.addEventListener('click', closeDialog);
-    }
-  </script>
 </body>
 </html>
