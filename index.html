@@ -405,25 +405,32 @@
 
   <script src="./scripts/like.js"></script>
   <script>
-    (function() {
-      var dialog = document.querySelector('.dialog');
-      var saveButtons = document.querySelectorAll('.card__like-button, .footer__save-button');
-      var closeButton = document.querySelector('.dialog__button');
+    const dialog = document.querySelector('.dialog');
+    const saveButtons = document.querySelectorAll('.card__like-button');
+    const footerButton = document.querySelector('.footer__save-button');
+    const closeButton = document.querySelector('.dialog__button');
 
-      if (!dialog) { console.error('NO DIALOG FOUND'); return; }
-      if (!closeButton) { console.error('NO CLOSE BUTTON FOUND'); return; }
-      if (!saveButtons.length) { console.error('NO SAVE BUTTONS FOUND'); return; }
+    function openDialog() {
+      dialog.showModal();
+    }
 
+    function closeDialog() {
+      dialog.close();
+    }
+
+    if (saveButtons.length) {
       saveButtons.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          dialog.showModal();
-        });
+        btn.addEventListener('click', openDialog);
       });
+    }
 
-      closeButton.addEventListener('click', function() {
-        dialog.close();
-      });
-    })();
+    if (footerButton) {
+      footerButton.addEventListener('click', openDialog);
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener('click', closeDialog);
+    }
   </script>
 </body>
 </html>
