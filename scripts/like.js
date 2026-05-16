@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   if (dialog) {
-    const openDialog = function() {
+    const openDialog = function(event) {
+      event.preventDefault();
       dialog.showModal();
     };
 
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (dialogCloseButton) {
-      dialogCloseButton.addEventListener('click', function() {
+      dialogCloseButton.addEventListener('click', function(event) {
+        event.preventDefault();
         dialog.close();
       });
     }
