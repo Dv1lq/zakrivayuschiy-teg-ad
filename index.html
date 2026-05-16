@@ -382,33 +382,37 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <button class="button footer__save-button" type="button" aria-label="Сохранить на память">
-        <svg class="floppy-icon" aria-hidden="true">
-          <use href="#icon-floppy"/>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
+  <footer class="footer">
+    <button class="button footer__save-button" type="button">
+      <svg class="floppy-icon" aria-hidden="true" width="28" height="28">
+        <use href="#icon-floppy"></use>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+  </footer>
 
-    <dialog class="dialog" id="save-dialog">
-      <div class="dialog__content">
-        <div class="dialog__top">
-          <svg class="dialog__floppy" aria-hidden="true">
-            <use href="#icon-floppy"/>
-          </svg>
-          <p class="dialog__text">Эта страница сохранит ваши воспоминания и передаст их&nbsp;в&nbsp;такой&nbsp;же непростой&nbsp;момент</p>
-        </div>
-        <button class="button dialog__button" type="button" autofocus>
-          <span class="button__text">ОК</span>
-        </button>
-      </div>
-    </dialog>
+  <dialog class="dialog">
+    <div class="dialog__content">
+      <svg class="dialog__floppy" aria-hidden="true" width="39" height="39">
+        <use href="#icon-floppy"></use>
+      </svg>
+      <p class="dialog__text">Эта страница сохранит ваши воспоминания и передаст их в такой же непростой момент</p>
+    </div>
+    <button class="button dialog__button" type="button">
+      <span class="button__text">ОК</span>
+    </button>
+  </dialog>
 
-    <script>
+  <script src="./scripts/like.js"></script>
+  <script>
+    (function() {
       var dialog = document.querySelector('.dialog');
-      var saveButtons = document.querySelectorAll('.footer__save-button');
+      var saveButtons = document.querySelectorAll('.card__like-button, .footer__save-button');
       var closeButton = document.querySelector('.dialog__button');
+
+      if (!dialog) { console.error('NO DIALOG FOUND'); return; }
+      if (!closeButton) { console.error('NO CLOSE BUTTON FOUND'); return; }
+      if (!saveButtons.length) { console.error('NO SAVE BUTTONS FOUND'); return; }
 
       saveButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -419,7 +423,7 @@
       closeButton.addEventListener('click', function() {
         dialog.close();
       });
-    </script>
-    <script src="./scripts/like.js"></script>
-  </body>
+    })();
+  </script>
+</body>
 </html>
