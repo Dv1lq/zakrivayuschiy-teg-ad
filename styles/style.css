@@ -267,7 +267,7 @@
   position: relative;
   overflow: hidden;
   border: 2px solid var(--color-accent);
-  background: transparent;
+  background-color: #fff;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
@@ -299,7 +299,7 @@
   z-index: 1;
   font-family: var(--font-accent);
   font-size: 14px;
-  color: var(--color-bg);
+  color: #fff;
   mix-blend-mode: difference;
 }
 
