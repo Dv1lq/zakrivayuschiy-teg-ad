@@ -305,8 +305,20 @@
 /* ─── LIKE BUTTON ────────────────────────────────────────── */
 
 .card__like-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   min-width: 130px;
   padding: 9px 17px;
+}
+
+.card__like-button .floppy-icon {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  color: var(--color-bg);
+  mix-blend-mode: difference;
 }
 
 /* ─── FOOTER SAVE BUTTON ─────────────────────────────────── */
@@ -378,7 +390,7 @@
   color: var(--color-accent);
 }
 
-.dialog__close-btn {
+.dialog__button {
   width: 100%;
   padding: 9px 17px;
   text-transform: uppercase;

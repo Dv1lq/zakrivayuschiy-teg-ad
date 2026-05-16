@@ -14,7 +14,7 @@
 
     <!-- SVG symbols -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="floppy" viewBox="0 0 28 28" fill="none">
+      <symbol id="icon-floppy" viewBox="0 0 28 28" fill="none">
         <path d="M2 2h20l4 4v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16zm0 0v6h16V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <rect x="8" y="2" width="2" height="6" fill="currentColor"/>
         <rect x="6" y="16" width="16" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
@@ -78,8 +78,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -120,8 +123,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -162,8 +168,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -204,8 +213,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -246,8 +258,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -288,8 +303,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -330,8 +348,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -372,8 +393,11 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button" type="button" aria-label="Нравится">
-                <span class="button__text">Like</span>
+              <button class="button card__like-button" type="button" aria-label="Сохранить на память">
+                <svg class="floppy-icon" aria-hidden="true">
+                  <use href="#icon-floppy"/>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
               </button>
             </div>
           </div>
@@ -383,9 +407,9 @@
     </main>
 
     <footer class="footer">
-      <button class="button footer__save-button card__save-btn" type="button" id="save-btn" aria-label="Сохранить на память">
+      <button class="button footer__save-button" type="button" aria-label="Сохранить на память">
         <svg class="floppy-icon" aria-hidden="true">
-          <use href="#floppy"/>
+          <use href="#icon-floppy"/>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
@@ -395,11 +419,11 @@
       <div class="dialog__content">
         <div class="dialog__top">
           <svg class="dialog__floppy" aria-hidden="true">
-            <use href="#floppy"/>
+            <use href="#icon-floppy"/>
           </svg>
           <p class="dialog__text">Эта страница сохранит ваши воспоминания и передаст их&nbsp;в&nbsp;такой&nbsp;же непростой&nbsp;момент</p>
         </div>
-        <button class="button dialog__close-btn" type="button" id="dialog-close-btn">
+        <button class="button dialog__button" type="button" autofocus>
           <span class="button__text">ОК</span>
         </button>
       </div>
@@ -407,29 +431,19 @@
 
     <script src="./scripts/like.js"></script>
     <script>
-      const dialog = document.querySelector('.dialog');
-      const saveButtons = document.querySelectorAll('.card__save-btn');
-      const closeButton = document.querySelector('.dialog__close-btn');
+      var dialog = document.querySelector('.dialog');
+      var saveButtons = document.querySelectorAll('.card__like-button');
+      var closeButton = document.querySelector('.dialog__button');
 
-      if (dialog && saveButtons.length > 0 && closeButton) {
-        saveButtons.forEach(function(btn) {
-          btn.addEventListener('click', function(evt) {
-            evt.preventDefault();
-            dialog.showModal();
-          });
+      saveButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          dialog.showModal();
         });
+      });
 
-        closeButton.addEventListener('click', function(evt) {
-          evt.preventDefault();
-          dialog.close();
-        });
-      } else {
-        console.error('Dialog elements not found:', {
-          dialog: !!dialog,
-          saveButtons: saveButtons.length,
-          closeButton: !!closeButton
-        });
-      }
+      closeButton.addEventListener('click', function() {
+        dialog.close();
+      });
     </script>
   </body>
 </html>
