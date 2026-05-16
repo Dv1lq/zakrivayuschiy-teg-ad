@@ -407,23 +407,29 @@
 
     <script src="./scripts/like.js"></script>
     <script>
-      const saveButtons = document.querySelectorAll('.card__save-btn');
       const dialog = document.querySelector('.dialog');
+      const saveButtons = document.querySelectorAll('.card__save-btn');
       const closeButton = document.querySelector('.dialog__close-btn');
 
-      saveButtons.forEach((btn) => {
-        btn.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          evt.stopPropagation();
-          dialog.showModal();
+      if (dialog && saveButtons.length > 0 && closeButton) {
+        saveButtons.forEach(function(btn) {
+          btn.addEventListener('click', function(evt) {
+            evt.preventDefault();
+            dialog.showModal();
+          });
         });
-      });
 
-      closeButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        evt.stopPropagation();
-        dialog.close();
-      });
+        closeButton.addEventListener('click', function(evt) {
+          evt.preventDefault();
+          dialog.close();
+        });
+      } else {
+        console.error('Dialog elements not found:', {
+          dialog: !!dialog,
+          saveButtons: saveButtons.length,
+          closeButton: !!closeButton
+        });
+      }
     </script>
   </body>
 </html>
