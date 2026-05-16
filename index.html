@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -13,7 +14,7 @@
   <body class="page">
 
     <!-- SVG symbols -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg class="svg-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <symbol id="icon-floppy" viewBox="0 0 28 28" fill="none">
         <path d="M2 2h20l4 4v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16zm0 0v6h16V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <rect x="8" y="2" width="2" height="6" fill="currentColor"/>
@@ -25,16 +26,16 @@
     <header class="header">
       <a class="header__logo">&lt;/&gt;</a>
       <h1 class="header__title">Закрывающий тег</h1>
-      <nav class="theme-menu">
+      <nav class="theme-menu" aria-label="Переключение темы">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button class="theme-menu__button" type="button" disabled>Light</button>
+            <button class="theme-menu__button" type="button" aria-pressed="true" disabled>Light</button>
           </li>
           <li class="theme-menu__item">
-            <button class="theme-menu__button" type="button">Dark</button>
+            <button class="theme-menu__button" type="button" aria-pressed="false">Dark</button>
           </li>
           <li class="theme-menu__item">
-            <button class="theme-menu__button" type="button">Auto</button>
+            <button class="theme-menu__button" type="button" aria-pressed="false">Auto</button>
           </li>
         </ul>
       </nav>
@@ -391,12 +392,12 @@
     </button>
   </footer>
 
-  <dialog class="dialog">
+  <dialog class="dialog" aria-label="Сохранение воспоминаний" aria-describedby="dialog-description">
     <div class="dialog__content">
       <svg class="dialog__floppy" aria-hidden="true" width="39" height="39">
         <use href="#icon-floppy"></use>
       </svg>
-      <p class="dialog__text">Эта страница сохранит ваши воспоминания и передаст их в такой же непростой момент</p>
+      <p class="dialog__text" id="dialog-description">Эта страница сохранит ваши воспоминания и передаст их в такой же непростой момент</p>
     </div>
     <button class="button dialog__button" type="button">
       <span class="button__text">ОК</span>

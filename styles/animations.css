@@ -22,15 +22,6 @@
   }
 }
 
-@keyframes button-slide {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 /* Like icon default state */
 .like-icon .core {
   fill: transparent;

@@ -21,6 +21,10 @@
   color: var(--color-accent);
 }
 
+.svg-symbols {
+  display: none;
+}
+
 /* ─── HEADER ─────────────────────────────────────────────── */
 
 .header {
@@ -28,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: clamp(375px, 100%, 700px);
+  width: min(100%, 700px);
   margin: 100px auto;
   padding: clamp(120px, 15vw, 136px) 0 25px;
   border: 2px solid var(--color-accent);
@@ -124,7 +128,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  width: clamp(375px, 100%, 700px);
+  width: min(100%, 700px);
   margin: 0 auto;
 }
 
@@ -267,7 +271,7 @@
   position: relative;
   overflow: hidden;
   border: 2px solid var(--color-accent);
-  background-color: #fff;
+  background-color: var(--color-bg);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
@@ -337,7 +341,7 @@
 /* ─── DIALOG ─────────────────────────────────────────────── */
 
 .dialog {
-  width: clamp(341px, 90vw, 357px);
+  width: min(357px, calc(100vw - 34px));
   padding: 30px;
   border: 2px solid var(--color-accent);
   background-color: var(--color-bg);
@@ -355,14 +359,8 @@
 
 .dialog__content {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.dialog__top {
-  display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .dialog__floppy {
@@ -420,7 +418,6 @@
   }
 
   .dialog {
-    width: 100%;
     padding: 30px 40px;
   }
 }
