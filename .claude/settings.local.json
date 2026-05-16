@@ -6,7 +6,11 @@
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__computer",
       "mcp__Claude_in_Chrome__browser_batch",
-      "Bash(echo \"exit:$?\")"
+      "Bash(echo \"exit:$?\")",
+      "Bash(node --check scripts/like.js)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
