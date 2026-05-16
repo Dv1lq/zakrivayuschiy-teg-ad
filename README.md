@@ -26,5 +26,5 @@
 
 ## Ссылки
 
-- [Репозиторий проекта](https://github.com/Dv1lq/zakrivayuschiy-teg-ad)
-- [Открыть сайт](https://dv1lq.github.io/zakrivayuschiy-teg-ad/)
+https://github.com/Dv1lq/zakrivayuschiy-teg-ad
+
