@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const cardButtonGroups = document.querySelectorAll('.card__buttons');
   const footerSaveButton = document.querySelector('.footer__save-button');
   const dialog = document.querySelector('.dialog');
+  const dialogForm = document.querySelector('.dialog__form');
   const dialogCloseButton = document.querySelector('.dialog__button');
 
   const setTheme = function(theme) {
@@ -74,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (dialogCloseButton) {
       dialogCloseButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        dialog.close();
+      });
+    }
+
+    if (dialogForm) {
+      dialogForm.addEventListener('submit', function(event) {
         event.preventDefault();
         dialog.close();
       });
