@@ -5,7 +5,8 @@
       "mcp__722d00f2-9f05-4bb7-9a37-456e975eec72__get_screenshot",
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__computer",
-      "mcp__Claude_in_Chrome__browser_batch"
+      "mcp__Claude_in_Chrome__browser_batch",
+      "Bash(echo \"exit:$?\")"
     ]
   }
 }
