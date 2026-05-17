@@ -25,6 +25,7 @@
 - Vanilla JavaScript
 
 ## Ссылки
-
+Гитхаб с репозиторием:
 https://github.com/Dv1lq/zakrivayuschiy-teg-ad
-
+Ссылка на страницу с гитхаба:
+https://dv1lq.github.io/zakrivayuschiy-teg-ad/
