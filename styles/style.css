@@ -341,11 +341,7 @@
 /* ─── DIALOG ─────────────────────────────────────────────── */
 
 .dialog {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
   width: min(357px, calc(100vw - 34px));
-  margin: auto;
   padding: 30px;
   border: 2px solid var(--color-accent);
   background-color: var(--color-bg);
@@ -358,14 +354,6 @@
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
-}
-
-.dialog[open]::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
   background-color: rgb(0 0 0 / 0.75);
 }
 

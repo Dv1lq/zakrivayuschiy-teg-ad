@@ -384,7 +384,7 @@
     </main>
 
   <footer class="footer">
-    <button class="button footer__save-button" type="button">
+    <button class="button footer__save-button" type="button" onclick="window['dialog'].showModal()" aria-controls="dialog">
       <svg class="floppy-icon" aria-hidden="true" width="28" height="28">
         <use href="#icon-floppy"></use>
       </svg>
@@ -392,7 +392,7 @@
     </button>
   </footer>
 
-  <dialog class="dialog" aria-label="Сохранение воспоминаний" aria-describedby="dialog-description">
+  <dialog id="dialog" class="dialog" aria-label="Сохранение воспоминаний" aria-describedby="dialog-description">
     <div class="dialog__content">
       <svg class="dialog__floppy" aria-hidden="true" width="39" height="39">
         <use href="#icon-floppy"></use>
@@ -400,7 +400,7 @@
       <p class="dialog__text" id="dialog-description">Эта страница сохранит ваши воспоминания и передаст их в такой же непростой момент</p>
     </div>
     <form class="dialog__form" method="dialog">
-      <button class="button dialog__button" type="button">
+      <button class="button dialog__button" type="button" onclick="window['dialog'].close()">
         <span class="button__text">ОК</span>
       </button>
     </form>

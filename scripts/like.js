@@ -2,10 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const page = document.querySelector('.page');
   const themeButtons = document.querySelectorAll('.theme-menu__button');
   const cardButtonGroups = document.querySelectorAll('.card__buttons');
-  const footerSaveButton = document.querySelector('.footer__save-button');
-  const dialog = document.querySelector('.dialog');
-  const dialogForm = document.querySelector('.dialog__form');
-  const dialogCloseButton = document.querySelector('.dialog__button');
 
   const setTheme = function(theme) {
     if (!page) {
@@ -60,31 +56,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  if (dialog) {
-    const openDialog = function(event) {
-      event.preventDefault();
-
-      if (!dialog.open) {
-        dialog.show();
-      }
-    };
-
-    if (footerSaveButton) {
-      footerSaveButton.addEventListener('click', openDialog);
-    }
-
-    if (dialogCloseButton) {
-      dialogCloseButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        dialog.close();
-      });
-    }
-
-    if (dialogForm) {
-      dialogForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        dialog.close();
-      });
-    }
-  }
 });
